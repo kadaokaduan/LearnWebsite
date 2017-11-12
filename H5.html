@@ -1,0 +1,260 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<script src="jquery-1.11.3.min.js">	</script>
+<style type="text/css">
+	body{
+		margin:0 0;
+		background-color:#DDDDDD;
+	}
+	.top{
+		border:0px;
+		background-color:#f54343;
+		height:55px;
+		width:94%;
+		padding-left:6%;
+		margin-bottom:0px;
+		color:white;
+		font-family:"微软雅黑 Light";
+		font-size:22px;
+		align-items:center; 
+		display: -webkit-flex;
+	}
+	#title{
+		float:left;
+	}
+	#logo{
+		height:25px;
+		width:25px;
+		position:relative;
+		left:-10px;
+	}
+	#search{
+		top:10px;
+		left:10%;
+		margin-left:5%;
+		width:50%;
+	}
+	#search_input{
+		border-radius:5px;
+		border:0px;
+		height:28px;
+		width:82%;
+		float:left;
+		position:relative;
+	}
+	#search_button{
+		background-color:white;
+		border:0px;
+		color:#B1B1B1;
+		border-radius:0px;
+		width:30px;
+		height:30px;
+		float:left;
+		left:-35px;	
+		position:relative;
+		background:url(images/search.jpg);
+		background-position:center;
+		background-repeat:no-repeat;
+		background-size:cover;
+	}
+	#menu{
+		padding-top:2%;
+		background-color:white;
+	}
+	td{
+		text-align:center;
+		font-family:"微软雅黑";
+		font-size:100%;
+	}
+	#show{
+		background-color:white;
+		width:25px;
+		height:25px;
+		border:0px;
+		background-image:url(show.jpg);
+		background-position:center;
+		background-repeat:no-repeat;
+	}
+	#hide{
+		background-color:white;
+		width:25px;
+		height:25px;
+		border:0px;
+		background-image:url(images/hide.jpg);
+		background-position:center;
+		background-repeat:no-repeat;
+	}
+	#hide_tr1{
+		display:none;
+	}
+	#hide_tr2{
+		display:none;
+	}
+	li{
+		list-style:none;
+	}
+	#img_play{
+		width:100%;
+		height:183px;
+		overflow:hidden;
+		text-align:center;
+	}
+	.images{
+		width:120%;
+		position:relative;
+		left:-41px;
+		top:-16px;
+	}
+	#img_play ul{
+		float:left;
+	}
+	#img_play ul li{
+		float:left;
+	}
+	.image_button{
+		width:50%;
+		position:absolute;
+		top:57%;
+		left:40%;
+		z-index:10;
+	}
+	._button{
+		height:3px;
+		background-color:#706F6F;
+		border:0;
+	}
+	.image_description{
+		position:absolute;
+		left:-6%;
+		top:52%;
+		z-index:11;
+		color:white;
+		font-family:"微软雅黑";
+		height:35px;
+		overflow:hidden;
+	}
+</style>
+<meta charset="utf-8">
+<title>手机页面</title>
+</head>
+<body>
+    <div class = "top">
+        <img alt = "logo" id = "logo" src="images/logo.png">
+        <a>凤凰网</a>
+        <div id = "search">
+        <input id = "search_input" placeholder="  搜索...">
+        <button id= "search_button"></button>
+        </div>
+    	<img src="images/cloud.png">        
+    </div>
+    
+    <div id = "menu">
+    	<table id = "menu_table" width = "100%" cellpadding="2%" bgcolor="white">
+        	<tr><td>新闻</td><td>视频</td><td>军事</td><td>体育</td><td>娱乐</td><td>财经</td><td>历史</td></tr>
+            <tr><td>汽车</td><td>社会</td><td>房产</td><td>科技</td><td>凤凰号</td><td>游戏</td><td>小说</td></tr>
+            <tr><td>搞笑</td><td>港澳</td><td>台湾</td><td>NBA</td><td>健康</td><td>匠选</td>
+            <td id = "change"><button id= "show" onClick="show()"></button></td></tr>
+            <tr id = "hide_tr1"><td>图片</td><td>直播</td><td>时尚</td><td>段子</td><td>彩票</td><td>FM</td><td>VIP</td></tr>
+            <tr id = "hide_tr2"><td>佛教</td><td>文化</td><td>国学</td><td>公益</td><td>动漫</td><td>F1</td>
+            <td><button id= "hide"></button></td></tr>
+        </table>
+	</div> 
+    
+    <div class = "image_description">
+        <ul>
+            <li>测试1测试1测试1</li>
+            <li>测试2测试2测试2</li>
+            <li>测试3测试3测试3</li>
+            <li>测试4测试4测试4</li>
+            <li>测试5测试5测试5</li>
+        </ul>
+    </div>
+    
+    <div class = "image_button">
+        <button class = "_button"></button>
+        <button class = "_button"></button>
+        <button class = "_button"></button>
+        <button class = "_button"></button>
+        <button class = "_button"></button>
+    </div>
+    
+    <div id = "img_play">
+    	<ul id = "slider">
+            <li><img src="images/1.jpg" class = "images"></li>
+            <li><img src="images/2.jpg" class = "images"></li>
+            <li><img src="images/3.jpg" class = "images"></li>
+            <li><img src="images/4.jpg" class = "images"></li>
+            <li><img src="images/5.jpg" class = "images"></li>
+        </ul>
+    </div>
+    
+    <script type="text/javascript">
+		var show_button = document.getElementById('show');
+		var show_button_copy = show_button.outerHTML;
+		var change = document.getElementById('change');
+		var hide_button = document.getElementById('hide');
+		var hides1 = document.getElementById('hide_tr1');
+		var hides2 = document.getElementById('hide_tr2');
+		console.log("success");
+		function show()
+		{
+				console.log("success");
+				hides1.style.display = "table-row";		
+				hides2.style.display = "table-row";	
+				change.innerHTML = "公益";
+		};
+		hide_button.onclick = function()
+		{
+				console.log("success");
+				hides1.style.display = "none";		
+				hides2.style.display = "none";	
+				change.innerHTML = show_button_copy;
+		};
+	</script>
+    
+	<script>
+        var pic_index=0;
+        var button_index;
+        $("._button").eq(0).css('background-color','red');
+        $("._button").click(function()
+        {
+            button_index = $(this).index();
+            $("._button").eq(button_index).css('background-color','red');
+            $("._button").eq(pic_index).css('background-color','#706F6F');
+            $(".image_description ul li").eq(button_index).fadeIn("slow").siblings("li").fadeOut("slow");
+            $("#img_play ul li").eq(button_index).fadeIn("slow").siblings("li").fadeOut("slow");
+            pic_index = button_index;
+        })
+        
+        //函数控制如果为大于4返回第一个
+        function slide_pic()
+        {
+            if(pic_index<4){pic_index = pic_index + 1}
+            else{pic_index=0}
+        }
+		
+        //函数申明主体，以及图片切换函数
+        slide_pic.prototype = {
+            pic_num : '5',
+            pic_slide : function() {
+                $("._button").eq(pic_index).css('background-color','red');
+                $("._button").eq(pic_index-1).css('background-color','#706F6F');
+                $(".image_description ul li").eq(pic_index).fadeIn("slow").siblings("li").fadeOut("slow");
+                $("#img_play ul li").eq(pic_index).fadeIn("slow").siblings("li").fadeOut("slow");
+            }
+        }
+		
+        //实例化函数。以及调用函数
+        function slide()
+        {
+            var obj = new slide_pic();
+            obj.pic_slide(pic_index);
+        }
+		
+        //函数计时器
+        var slide_index = setInterval(slide,3000);
+    </script>
+</body>
+</html>
