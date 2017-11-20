@@ -1,16 +1,19 @@
 # 目录
-* [Windows](#基于Windows)
+* [Windows](#基于windows)
 	* [数据库](#使用数据库)
 	* [html](#html)
 	* [php](#php)
 	* [总结w1](#总结w1)
 	* [总结w2](#总结w2)
-* [Ubuntu](#基于Ubuntu)
-	* [安装Ubuntu](#安装Ubuntu16.04.3)
-	* [搭建LAMP环境](#搭建LAMP环境)
-	* [配置Laravel](#配置Laravel)
+* [Ubuntu](#基于ubuntu)
+	* [安装Ubuntu](#安装ubuntu16-04-3)
+	* [搭建LAMP环境](#搭建lamp环境)
+	* [配置Laravel](#配置laravel)
 	* [用户认证](#用户认证)
 	* [总结u1](#总结u1)
+	* [基础知识](#基础知识)
+	* [构建留言板](#构建留言板)
+	* [总结u2](#总结u2)
 
 
 ## 基于Windows
@@ -116,7 +119,7 @@ active INT DEFAULT 0 NOT NULL//激活标志
 		* `sudo chmod 777 /var/www`
 	* 编辑测试php文件
 		* `sudo vi /var/www/info.php`
-		* `<?php phpinfo(); ?>
+		* `<?php phpinfo(); ?>`
 		* 按i开始编辑，编辑完成后先按ESC再敲`:wq`保存退出
 	* 配置根目录
 		* `sudo vi /etc/apache2/sites-available/000-default.conf`
@@ -132,11 +135,10 @@ active INT DEFAULT 0 NOT NULL//激活标志
 	* 若出现mbstring错误
 		* `sudo apt-get install php-mbstring`
 		* 修改php配置文件
-			* ```
-			* sudo gedit /etc/php/7.0/apache2/php.ini
+			* `sudo gedit /etc/php/7.0/apache2/php.ini`
 			* display_errors = On(显示错误日志，出现两次，都要改，不然无效)
-			* extension=php_mbstring.dll (开启mbstring)
-			* ```
+			* `extension=php_mbstring.dll`
+			* 开启mbstring
 		* 重启apache
 			* `sudo /etc/init.d/apache2 restart`
 		* 再次用浏览器访问127.0.0.1/phpmyadmin
@@ -180,7 +182,6 @@ active INT DEFAULT 0 NOT NULL//激活标志
 	* 浏览器访问localhost:8000
 
 
-
 #### 用户认证
 参考文档：
 
@@ -188,7 +189,74 @@ active INT DEFAULT 0 NOT NULL//激活标志
 * [Laravel 5.4用户认证](http://laravelacademy.org/post/6803.html)
 
 
-#### 总结u1
+## 总结u1
 * 配置好Laravel环境
 * 搭建完LAMP环境再搭建Laravel更方便
 * 尚未弄懂框架
+
+
+## 基础知识
+#### 配置
+* .env
+* database/mail
+* /config/database.php
+* /config/mail.php
+
+##### Controller
+* /app/Http/Controllers
+	* xxxController.php
+	* `php artisan make:controller XxxController`
+
+##### View
+* /resources/views
+	* xxx.blade.php
+
+##### Route
+* /routes/web.php
+
+##### css/js
+* /public
+
+
+## 构建留言板
+* 获得权限
+	* `export PATH="~/.config/composer/vendor/bin:$PATH"`
+* 使用laravel新建项目
+	* `laravel new test` test是项目名称
+* 路由
+	* /routes/web.php
+	* 添加路由
+	* `Route::get('/test','TestController@index);`
+	* `Route::post('/test','TestController@store);`
+* Controller
+	* `php artisan make:controller TestController`
+* 视图
+	* /resources/views
+	* 新建文件`test.blade.php`
+* 表单
+	* `php artisan make:migration create_notes_table`
+	* /database/migrations
+	* 增加字段
+		* `$table->string('name')`
+		* `$table->text('content')`
+	* 创建表
+		* `php artisan migrate`
+* Module
+	* `php artisan make:module Note`
+	* /app/
+	* 测试
+		* `php artisan tinker`
+			> [用法参考](http://laravelacademy.org/post/4935.html)
+			> 
+			> 数据表xxxxs，model:Xxxx单数大写		
+	* 暂时不做改动 
+* 完成页面如下
+* []()
+
+## 总结u2
+* laravel框架机制基本搞明白了，但是上手还很生疏
+* 自带的用户认证还没完全搞明白
+* 先尝试做了个留言板
+* 正在构建用户认证
+* 未使用中间控件
+* 回看一下windows上的php，虽然功能大体实现但是太糅杂了，有空重写。打算先了解laravel框架。
