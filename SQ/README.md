@@ -251,7 +251,7 @@ active INT DEFAULT 0 NOT NULL//激活标志
 			> 数据表xxxxs，model:Xxxx单数大写		
 	* 暂时不做改动 
 * 完成页面如下
-* ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Ubuntu/test.png)
+![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Ubuntu/test.png)
 
 ## 总结u2
 * laravel框架机制基本搞明白了，但是上手还很生疏
