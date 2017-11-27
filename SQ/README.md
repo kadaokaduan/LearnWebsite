@@ -75,18 +75,25 @@ active INT DEFAULT 0 NOT NULL//激活标志
 #### 过程
 > 主要界面<br>
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Windows/index.png)
+<br>
 > 注册界面<br>
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Windows/signup.png)
+<br>
 > 注册后<br>
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Windows/after-signup.png)
+<br>
 > 收到邮件<br>
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Windows/email.jpg)
+<br>
 > 激活账号<br>
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Windows/active.jpg)
+<br>
 > 登录界面<br>
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Windows/signin.png)
+<br>
 > 登陆成功<br>
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Windows/after-signin.png)
+<br>
 > 若有错误会以字符串形式展现，如：<br>
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Windows/error.png)
 
@@ -356,18 +363,25 @@ Route::get('/success', 'RegisterController@confirm');
 #### 过程
 > 主要界面<br>
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Ubuntu/home.png)
+<br>
 > 注册界面<br>
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Ubuntu/register.png)
+<br>
 > 注册后<br>
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Ubuntu/after-register.png)
+<br>
 > 收到邮件<br>
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Ubuntu/mail.jpg)
+<br>
 > 激活账号<br>
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Ubuntu/active.png)
+<br>
 > 登录界面<br>
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Ubuntu/login.png)
+<br>
 > 登陆成功<br>
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Ubuntu/logged.png)
+<br>
 > 若有错误会以列表的形式展现，如：<br>
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Ubuntu/error.png)
 
