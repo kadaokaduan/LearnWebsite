@@ -379,5 +379,3 @@ Route::get('/success', 'RegisterController@confirm');
 * 基本弄懂了流程，没有用到中间件
 * 弄懂了基本控件
 * 补上代码和截图
-=======
->>>>>>> fac377420f4a6de458d1400b4f29092c03d15fc2
