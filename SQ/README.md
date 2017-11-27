@@ -270,7 +270,11 @@ active INT DEFAULT 0 NOT NULL//激活标志
 			> 数据表xxxxs，model:Xxxx单数大写		
 	* 暂时不做改动 
 * 完成页面如下
+<<<<<<< HEAD
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Ubuntu/guestbook/test.png)
+=======
+![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Ubuntu/test.png)
+>>>>>>> fac377420f4a6de458d1400b4f29092c03d15fc2
 
 ## 总结u2
 * laravel框架机制基本搞明白了，但是上手还很生疏
@@ -279,6 +283,7 @@ active INT DEFAULT 0 NOT NULL//激活标志
 * 正在构建用户认证
 * 未使用中间控件
 * 回看一下windows上的php，虽然功能大体实现但是太糅杂了，有空重写。打算先了解laravel框架。
+<<<<<<< HEAD
 
 ## 构建登录注册
 #### 数据表
@@ -374,3 +379,5 @@ Route::get('/success', 'RegisterController@confirm');
 * 基本弄懂了流程，没有用到中间件
 * 弄懂了基本控件
 * 补上代码和截图
+=======
+>>>>>>> fac377420f4a6de458d1400b4f29092c03d15fc2
