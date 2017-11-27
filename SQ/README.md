@@ -73,21 +73,21 @@ active INT DEFAULT 0 NOT NULL//激活标志
 	* 参考
 
 #### 过程
-> 主要界面
+> 主要界面<br>
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Windows/index.png)
-> 注册界面
+> 注册界面<br>
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Windows/signup.png)
-> 注册后
+> 注册后<br>
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Windows/after-signup.png)
-> 收到邮件
+> 收到邮件<br>
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Windows/email.jpg)
-> 激活账号
+> 激活账号<br>
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Windows/active.jpg)
-> 登录界面
+> 登录界面<br>
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Windows/signin.png)
-> 登陆成功
+> 登陆成功<br>
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Windows/after-signin.png)
-> 若有错误会以字符串形式展现，如：
+> 若有错误会以字符串形式展现，如：<br>
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Windows/error.png)
 
 ## 总结w1
@@ -269,8 +269,9 @@ active INT DEFAULT 0 NOT NULL//激活标志
 			> 
 			> 数据表xxxxs，model:Xxxx单数大写		
 	* 暂时不做改动 
-* 完成页面如下
+* 完成页面如下<br>
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Ubuntu/guestbook/test.png)
+<br>
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Ubuntu/test.png)
 
 ## 总结u2
@@ -353,21 +354,21 @@ Route::get('/success', 'RegisterController@confirm');
 	* 规定登录输入标准
 
 #### 过程
-> 主要界面
+> 主要界面<br>
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Ubuntu/home.png)
-> 注册界面
+> 注册界面<br>
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Ubuntu/register.png)
-> 注册后
+> 注册后<br>
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Ubuntu/after-register.png)
-> 收到邮件
+> 收到邮件<br>
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Ubuntu/mail.jpg)
-> 激活账号
+> 激活账号<br>
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Ubuntu/active.png)
-> 登录界面
+> 登录界面<br>
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Ubuntu/login.png)
-> 登陆成功
+> 登陆成功<br>
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Ubuntu/logged.png)
-> 若有错误会以列表的形式展现，如：
+> 若有错误会以列表的形式展现，如：<br>
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Ubuntu/error.png)
 
 ## 总结u3
