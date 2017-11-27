@@ -73,28 +73,36 @@ active INT DEFAULT 0 NOT NULL//激活标志
 	* 参考
 
 #### 过程
-> 主要界面<br>
+* 主要界面
+
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Windows/index.png)
-<br>
-> 注册界面<br>
+
+* 注册界面
+
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Windows/signup.png)
-<br>
-> 注册后<br>
+
+* 注册后
+
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Windows/after-signup.png)
-<br>
-> 收到邮件<br>
+
+* 收到邮件
+
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Windows/email.jpg)
-<br>
-> 激活账号<br>
+
+* 激活账号
+
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Windows/active.jpg)
-<br>
-> 登录界面<br>
+
+* 登录界面
+
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Windows/signin.png)
-<br>
-> 登陆成功<br>
+
+* 登陆成功
+
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Windows/after-signin.png)
-<br>
-> 若有错误会以字符串形式展现，如：<br>
+
+* 若有错误会以字符串形式展现，如：
+
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Windows/error.png)
 
 ## 总结w1
@@ -276,10 +284,9 @@ active INT DEFAULT 0 NOT NULL//激活标志
 			> 
 			> 数据表xxxxs，model:Xxxx单数大写		
 	* 暂时不做改动 
-* 完成页面如下<br>
+* 完成页面如下
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Ubuntu/guestbook/test.png)
-<br>
-![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Ubuntu/test.png)
+
 
 ## 总结u2
 * laravel框架机制基本搞明白了，但是上手还很生疏
@@ -288,6 +295,7 @@ active INT DEFAULT 0 NOT NULL//激活标志
 * 正在构建用户认证
 * 未使用中间控件
 * 回看一下windows上的php，虽然功能大体实现但是太糅杂了，有空重写。打算先了解laravel框架。
+<<<<<<< HEAD
 
 ## 构建登录注册
 #### 数据表
@@ -361,29 +369,35 @@ Route::get('/success', 'RegisterController@confirm');
 	* 规定登录输入标准
 
 #### 过程
-> 主要界面<br>
+* 主要界面
+
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Ubuntu/home.png)
-<br>
-> 注册界面<br>
+
+* 注册界面
+
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Ubuntu/register.png)
-<br>
-> 注册后<br>
+
+* 注册后
+
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Ubuntu/after-register.png)
-<br>
-> 收到邮件<br>
+
+* 收到邮件
+
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Ubuntu/mail.jpg)
-<br>
-> 激活账号<br>
-![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Ubuntu/active.png)
-<br>
-> 登录界面<br>
+
+
+* 登录界面
+
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Ubuntu/login.png)
-<br>
-> 登陆成功<br>
+
+* 登陆成功
+
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Ubuntu/logged.png)
-<br>
-> 若有错误会以列表的形式展现，如：<br>
+
+* 若有错误会以列表的形式展现，如：
+
 ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Ubuntu/error.png)
+
 
 ## 总结u3
 * 硬生生拼凑出来，有些重用的没规划（@yield）
