@@ -14,6 +14,8 @@
 	* [基础知识](#基础知识)
 	* [构建留言板](#构建留言板)
 	* [总结u2](#总结u2)
+	* [构建登录注册](#构建登录注册)
+	* [总结u3](#总结u3)
 
 
 ## 基于Windows
@@ -70,6 +72,23 @@ active INT DEFAULT 0 NOT NULL//激活标志
 	* 发送函数
 	* 参考
 
+#### 过程
+> 主要界面
+![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Windows/index.png)
+> 注册界面
+![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Windows/signup.png)
+> 注册后
+![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Windows/after-signup.png)
+> 收到邮件
+![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Windows/email.jpg)
+> 激活账号
+![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Windows/active.jpg)
+> 登录界面
+![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Windows/signin.png)
+> 登陆成功
+![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Windows/after-signin.png)
+> 若有错误会以字符串形式展现，如：
+![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Windows/error.png)
 
 ## 总结w1
 * 用xmapp集成包搭建环境
@@ -116,7 +135,7 @@ active INT DEFAULT 0 NOT NULL//激活标志
 	* `sudo apt-get install php7.0 libapache2-mod-php7.0`
 * 测试PHP
 	* 更改权限
-		* `sudo chmod 777 /var/www`
+		* `sudo chmod 775 -R /var/www`
 	* 编辑测试php文件
 		* `sudo vi /var/www/info.php`
 		* `<?php phpinfo(); ?>`
@@ -251,7 +270,7 @@ active INT DEFAULT 0 NOT NULL//激活标志
 			> 数据表xxxxs，model:Xxxx单数大写		
 	* 暂时不做改动 
 * 完成页面如下
-* []()
+![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Ubuntu/guestbook/test.png)
 
 ## 总结u2
 * laravel框架机制基本搞明白了，但是上手还很生疏
@@ -260,3 +279,98 @@ active INT DEFAULT 0 NOT NULL//激活标志
 * 正在构建用户认证
 * 未使用中间控件
 * 回看一下windows上的php，虽然功能大体实现但是太糅杂了，有空重写。打算先了解laravel框架。
+
+## 构建登录注册
+#### 数据表
+* id  //自增
+* name
+* email  //唯一
+* password
+* active
+* timestamps
+
+#### 配置.env
+* 将MAIL那部分内容进行修改
+	* `MAIL_HOST=smtp.163.com`
+	* `MAIL_PORT=25`
+	* `MAIL_USERNAME=@163.com`
+	* `MAIL_PASSWORD=`
+
+#### 控制器Controller
+* LoginController
+	* 登录，做各种判断
+		* 账号存在
+		* 密码正确
+		* 用户激活
+* RegisterController
+	* 注册，写入数据库
+		* 昵称，邮箱，密码
+		* 发送激活邮件
+	* 验证邮件
+		* 重复激活判断
+* EmailController
+	* 邮件内容设定
+	* 发送激活邮件
+
+#### 路由
+```
+Route::get('/home', function ($message = "") {
+    return view('home',compact('message'));
+});
+
+Route::get('/login', function () {
+    return view('login');
+});
+Route::post('/login','LoginController@log');
+
+Route::get('/register', function () {
+    return view('register');
+});
+Route::post('/register','RegisterController@create');
+
+Route::get('/success', 'RegisterController@confirm');
+```
+
+#### 视图View
+* home.blade.php
+	* 主要视图
+* login.blade.php
+	* 登录视图
+* register.blade.php
+	* 注册视图
+* success.blade.php
+	* 激活成功视图
+
+#### 模型Model
+* Test.php
+	* 参考自带的User.php
+
+#### 请求
+* CreateUserRequest.php
+	* 规定注册输入标准
+* LoginRequest.php
+	* 规定登录输入标准
+
+#### 过程
+> 主要界面
+![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Ubuntu/home.png)
+> 注册界面
+![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Ubuntu/register.png)
+> 注册后
+![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Ubuntu/after-register.png)
+> 收到邮件
+![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Ubuntu/mail.jpg)
+> 激活账号
+![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Ubuntu/active.png)
+> 登录界面
+![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Ubuntu/login.png)
+> 登陆成功
+![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Ubuntu/logged.png)
+> 若有错误会以列表的形式展现，如：
+![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Ubuntu/error.png)
+
+## 总结u3
+* 硬生生拼凑出来，有些重用的没规划（@yield）
+* 基本弄懂了流程，没有用到中间件
+* 弄懂了基本控件
+* 补上代码和截图
