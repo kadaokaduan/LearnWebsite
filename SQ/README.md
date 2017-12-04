@@ -16,6 +16,7 @@
 	* [总结u2](#总结u2)
 	* [构建登录注册](#构建登录注册)
 	* [总结u3](#总结u3)
+	* [总结u4](#总结u4)
 
 
 ## 基于Windows
@@ -295,7 +296,6 @@ active INT DEFAULT 0 NOT NULL//激活标志
 * 正在构建用户认证
 * 未使用中间控件
 * 回看一下windows上的php，虽然功能大体实现但是太糅杂了，有空重写。打算先了解laravel框架。
-<<<<<<< HEAD
 
 ## 构建登录注册
 #### 数据表
@@ -404,3 +404,9 @@ Route::get('/success', 'RegisterController@confirm');
 * 基本弄懂了流程，没有用到中间件
 * 弄懂了基本控件
 * 补上代码和截图
+
+
+## 总结u4
+* 补上代码和截图
+* 数据表结构
+* ![](https://github.com/jckling/LearnWebsite/blob/master/SQ/Ubuntu/register&login/table.png)
