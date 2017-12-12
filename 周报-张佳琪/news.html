@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>新闻页</title>
+<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="nc">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style = "background:#FF4245;">
+      <div class="container-fluid">
+        <div class="navbar-header col-xs-14"> 
+          <a class="navbar-brand" href="#" style="color:#FFFFFF;font-family:'微软雅黑'">
+             <button style="background:#FF4245;border:none;">
+                <span class="glyphicon glyphicon-chevron-left" style="color:#FFFFFF;"></span>
+                <img alt = "logo" src="images/logo.png" style="width:22px;"> |
+             </button>
+              资讯频道
+          </a>
+          <span class="glyphicon glyphicon-share navbar-text pull-right" ng-click="share()" style="color:#FFFFFF;font-size:20px;margin-right:10px;"></span>   
+        </div>
+      </div>
+    </nav>
+    <div  style="padding:0 15px;" >
+        <br><br><br>
+        <p style="font-size:22px;" class="news_content">习近平十二个金句描绘美好世界</p>
+        <small style="color:#ACACAC;">2017-12-02 08:44 央视新闻</small>
+        <button ng-click="change_size()" ng-model="size" class="pull-right" style="border:none; border-radius:15px; background-color:#ECECEC;">{{size}}</button></br>
+        <br>
+        <p ng-style="ctrl1">
+        <strong style="font-size:16px;"> 央视网消息：</strong>
+        12月1日，中国共产党与世界政党高层对话会在北京召开。<br>
+        <br>虽逢年终岁末，人民大会堂却宾客云集。在来自120多个国家、近300个政党和政党组织领导人的热烈掌声中，
+        中共中央总书记、国家主席习近平走上演讲台，发表题为《携手建设更加美好的世界》的主旨讲话，向世界政党描绘美好世界，
+        分享中国心得。<br><br>
+        <img class = "img-responsive" src="images/new_image.jpg">
+        <blockquote>
+        <small>12月1日，中共中央总书记、国家主席习近平在北京人民大会堂出席中国共产党与世界政党高层对话会开幕式，并发表题为《携手建设更加美好的世界》的主旨讲话。<br>（图片来源：新华观点）</small>
+        </blockquote>
+        </p>
+        
+        <p ng-style="ctrl2">
+        当今世界，互联网、大数据、云计算、量子卫星、人工智能迅猛发展，人类生活的关联前所未有。同时，人类面临的全球性问题数量之多、规模之大、程度之深也前所未有。
+        <br><br>
+        习近平说：<strong>“世界各国人民前途命运越来越紧密地联系在一起。”</strong>
+        <br><br>
+        面对局势，人类有两种选择。一种是，人们为了争夺权力恶性竞争甚至兵戎相见，这很可能带来灾难性危机。
+        另一种是，人们顺应时代发展潮流，齐心协力应对挑战，开展全球性协作，这就将为构建人类命运共同体创造有利条件。
+        </p>
+        
+        <p ng-hide="ctrl3" ng-style="ctrl4">
+        习近平说：<strong>“我们要抓住历史机遇，作出正确选择，共同开创人类更加光明的未来”</strong>
+        <br><br>
+        古往今来，过上幸福美好生活始终是人类孜孜以求的梦想。世界各国尽管有这样那样的分歧矛盾，也免不了产生这样那样的磕磕碰碰，但世界各国人民都生活在同一片蓝天下、拥有同一个家园，应该是一家人。
+        </p>
+        
+        <div class="text-center">
+            <a style="font-size:18px;" ng-click="continute_read()" ng-hide="ctrl5">继续阅读 <span class="glyphicon glyphicon-chevron-down"></span></a>
+            <br><br>
+        </div>
+        
+        <div class = "text-right">
+            <p>责任编辑人：叶鹏 PNz043</p>
+            <br>
+        </div>
+        
+        <div class = "text-right">
+            <button type="button" class="btn btn-default" style="width:25px;height:25px;background:url(images/logo1.png)"></button>
+            <a>查看原文</a>
+        </div>
+    </div>
+    
+    <div ng-hide="share_view" style="height:100%;width:100%;position:absolute;top:48px;background:rgba(0,0,0,0.7);text-align:center;">
+        <span class="glyphicon glyphicon-share" style="color:#FFFFFF;font-size:20px;top:20%;"> 分享到<br>
+        <img src="images/qqzone.png" align="middle" style="width:50px;margin-top:20px;">
+        <img src="images/mircoBlog.png" align="middle" style="width:50px;margin-top:20px;">
+        </span><br><br>
+        <span class="glyphicon glyphicon-download"  style="color:#FFFFFF;font-size:20px;top:20%"> 应用下载<br>
+        <img src="images/bigLogo.png" align="middle" style="width:50px;margin-top:20px;">
+        </span>
+    </div>
+    
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery-1.11.2.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="js/bootstrap.js"></script>
+<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+<script src="js/controller1.js"></script>
+</body>
+</html>
